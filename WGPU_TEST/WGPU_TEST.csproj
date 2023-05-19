@@ -1,0 +1,323 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+    <!--<None Remove=".gitignore" />
+    <None Remove="GLSLShaders\v330\CommonVertexShaders\quad.vert" />
+    <None Remove="GLSLShaders\v330\CommonVertexShaders\quad2.vert" />
+    <None Remove="GLSLShaders\v330\CommonVertexShaders\quadih.vert" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_add.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_sub.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_over.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_under.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill3.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_fast.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_lightwrap.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new2.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\border.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\brightness_contrast.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\camerabarrelfix.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\channel_mixer.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\chromablurh.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\chromablurv.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\colourmatrix.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\deinterlace_blend.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\dilate.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\dilate_alpha.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\erode.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\erode_alpha.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\exposure_highlight.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurh.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurv.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\levels.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\levels_alpha.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\quantise.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance_keepluma.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\sharpen.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\white_balance.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\white_balance.frag.o" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendalpha.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendboost4.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendboost6.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendmark.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\copy.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\copy_checkerboard.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\copy_prealpha.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\hdyc_to_rgb.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\hdyc_to_rgb_lerp.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_colour.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_hue.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_perceivedbrightness.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_saturation.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_value.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_u.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_uv.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_v.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_y.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\tiled_background.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\uyvy_to_rgb.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\uyvy_to_rgb_lerp.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb_lerp.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2_to_rgb.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2_to_rgb_lerp.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\yvyu_to_rgb.frag" />
+    <None Remove="GLSLShaders\v330\GPUImage\yvyu_to_rgb_lerp.frag" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Remove="Assets\img1_2_500x500_255-255-255-255_trebuc.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\img1_2_500x500_255-255-255-255_trebuc.jpg" />
+    <None Remove="GLSLShaders\v330\CommonVertexShaders\quad.wgsl" />
+    <None Remove="GLSLShaders\v330\CommonVertexShaders\quad2.wgsl" />
+    <None Remove="GLSLShaders\v330\CommonVertexShaders\quadih.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_add.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_sub.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_over.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_under.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill3.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_fast.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_lightwrap.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new2.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\border.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\brightness_contrast.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\camerabarrelfix.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\channel_mixer.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\chromablurh.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\chromablurv.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\colormatrix.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\deinterlace_blend.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\dilate.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\dilate_alpha.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\erode.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\erode_alpha.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\exposure_highlight.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurh.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurv.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\levels.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\levels_alpha.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\quantise.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance_keepluma.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\sharpen.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage.CoreFilters\white_balance.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendalpha.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendboost4.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendboost6.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\alphablendmark.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\copy.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\copy_checkerboard.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\copy_prealpha.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\hdyc_to_rgb.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\hdyc_to_rgb_lerp.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_colour.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_hue.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_perceivedbrightness.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_saturation.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_value.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_u.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_uv.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_v.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\replace_yuv_y.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\tiled_background.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\uyvy_to_rgb.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\uyvy_to_rgb_lerp.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb_lerp.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2_to_rgb.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\yuy2_to_rgb_lerp.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\yvyu_to_rgb.wgsl" />
+    <None Remove="GLSLShaders\v330\GPUImage\yvyu_to_rgb_lerp.wgsl" />
+    <None Remove="wgpu_native.dll" />
+    <None Remove="Assets\Kaioken_high_quality.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\img1_2_500x500_255-255-255-255_trebuc.jpg" />
+    <EmbeddedResource Include="GLSLShaders\v330\CommonVertexShaders\quad.vert" />
+    <EmbeddedResource Include="GLSLShaders\v330\CommonVertexShaders\quad.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\CommonVertexShaders\quad2.vert" />
+    <EmbeddedResource Include="GLSLShaders\v330\CommonVertexShaders\quad2.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\CommonVertexShaders\quadih.vert" />
+    <EmbeddedResource Include="GLSLShaders\v330\CommonVertexShaders\quadih.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_add.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_add.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_sub.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\alphamask_sub.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_over.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_over.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_under.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\blendalpha_under.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill3.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_antispill3.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_fast.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_fast.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_lightwrap.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_lightwrap.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new2.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.ChromaKey\chromakey_new2.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\border.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\border.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\brightness_contrast.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\brightness_contrast.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\camerabarrelfix.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\camerabarrelfix.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\channel_mixer.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\channel_mixer.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\chromablurh.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\chromablurh.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\chromablurv.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\chromablurv.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\colormatrix.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\colormatrix.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\deinterlace_blend.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\deinterlace_blend.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\dilate.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\dilate.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\dilate_alpha.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\dilate_alpha.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\erode.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\erode.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\erode_alpha.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\erode_alpha.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\exposure_highlight.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\exposure_highlight.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurH.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurH.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurV.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\gaussian_blurV.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\levels.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\levels.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\levels_alpha.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\levels_alpha.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\quantise.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\quantise.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance_keepluma.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\rgb_balance_keepluma.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\sharpen.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\sharpen.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\white_balance.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage.CoreFilters\white_balance.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendalpha.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendalpha.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendboost4.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendboost4.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendboost6.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendboost6.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendmark.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\alphablendmark.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\copy.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\copy.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\copy_checkerboard.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\copy_checkerboard.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\copy_prealpha.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\copy_prealpha.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\hdyc_to_rgb.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\hdyc_to_rgb.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\hdyc_to_rgb_lerp.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\hdyc_to_rgb_lerp.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_colour.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_colour.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_hue.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_hue.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_perceivedbrightness.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_perceivedbrightness.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_saturation.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_saturation.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_value.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_value.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_u.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_u.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_uv.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_uv.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_v.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_v.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_y.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\replace_yuv_y.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\tiled_background.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\tiled_background.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\uyvy_to_rgb.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\uyvy_to_rgb.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\uyvy_to_rgb_lerp.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\uyvy_to_rgb_lerp.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb_lerp.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2hd_to_rgb_lerp.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2_to_rgb.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2_to_rgb.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2_to_rgb_lerp.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yuy2_to_rgb_lerp.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yvyu_to_rgb.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yvyu_to_rgb.wgsl" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yvyu_to_rgb_lerp.frag" />
+    <EmbeddedResource Include="GLSLShaders\v330\GPUImage\yvyu_to_rgb_lerp.wgsl" />
+    <EmbeddedResource Include="wgpu_native.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Kaioken_high_quality.PNG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TrimmerRootDescriptor Include="Roots.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.19" />
+
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.18" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.18" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.18" />
+    <PackageReference Include="Silk.NET.Core" Version="2.17.1" />
+    <PackageReference Include="Silk.NET.Maths" Version="2.17.1" />
+    <PackageReference Include="Silk.NET.WebGPU.Extensions.WGPU" Version="2.17.1" />
+    <PackageReference Include="Silk.NET.WebGPU.Native.WGPU" Version="2.17.1" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.1" />
+    <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
+    <PackageReference Include="WGPU.NET" Version="0.4.0" />
+    <PackageReference Include="XamlNameReferenceGenerator" Version="1.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="libwgpu_native.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="libwgpu_native.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="wgpu_native.lib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Wrapper\" />
+  </ItemGroup>
+</Project>

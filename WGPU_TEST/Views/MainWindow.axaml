@@ -1,0 +1,60 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:WGPU_TEST.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="800"
+        x:Class="WGPU_TEST.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="WGPU_TEST"
+        Height="800">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <Grid RowDefinitions="*" ColumnDefinitions="300,7*">
+        <Grid RowDefinitions="50,50,50,30,30" ColumnDefinitions="130,300">
+                <Label Content="RED" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                <Slider Name="RED"
+                    Value="0.0"
+                    Minimum="0.0"
+                    Maximum="0.5"
+                    Grid.Row="0"
+                    Width="150"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"/>
+
+                <Label Content="GREEN" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                <Slider Name="GREEN"
+                    Value="0.0"
+                    Minimum="0.0"
+                    Maximum="0.5"
+                    Grid.Row="1"
+                    Width="150"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"/>
+
+                <Label Content="BLUE" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                <Slider Name="BLUE"
+                    Value="0.0"
+                    Minimum="0.0"
+                    Maximum="0.5"
+                    Grid.Row="2"
+                    Width="150"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"/>
+            <Label Content="RenderEngine:" Grid.Row="3" Grid.Column="0"/>
+            <Label Name="RenderEngine" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Content="CurrentShader:" Grid.Row="4" Grid.Column="0"/>
+            <Label Name="CurrentShader" Grid.Row="4" Grid.Column="1"/>
+        </Grid>
+
+        <Image x:Name="MyImage" VerticalAlignment="Top" Grid.Column="1"/>
+    </Grid>
+    
+
+
+</Window>
